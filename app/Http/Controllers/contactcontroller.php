@@ -9,7 +9,7 @@ use Illuminate\Http\Request;
 class contactcontroller extends Controller
 {
     public function index(){
-        $contacts= Contact::all();
+        $contacts= Contact::all()->sortBy("id");;
         return view('contact-list',compact('contacts'));
     }
 
